@@ -1,0 +1,76 @@
+/* weatherinformations5Days.css */
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center; /* Centraliza o título */
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row; /* Alinha as previsões lado a lado */
+    flex-wrap: wrap; /* Permite que as previsões se movam para a linha seguinte se não houver espaço suficiente */
+    justify-content: space-around; /* Espaça as previsões uniformemente */
+}
+
+.daily-forecast {
+    margin: 10px; /* Ajusta o espaçamento entre as previsões */
+    flex: 1 1 180px; /* Ajusta a largura das previsões e permite que elas se ajustem */
+    text-align: center; /* Centraliza o texto dentro de cada previsão */
+    background-color: PaleGoldenrod; /* Fundo branco claro para cada previsão */
+    border-radius: 8px; /* Borda arredondada para cada previsão */
+    padding: 10px; /* Espaçamento interno para cada previsão */
+}
+
+.daily-forecast img {
+    width: 80px; /* Ajusta a largura da imagem */
+}
+
+.temperature {
+    font-weight: bold;
+    font-size: 1.8rem; /* Ajusta o tamanho da fonte */
+    margin-bottom: 5px; /* Espaço inferior */
+}
+
+.description {
+    text-transform: capitalize;
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 0.9rem; /* Tamanho da fonte para a data */
+    margin-top: 5px; /* Espaço superior para a data */
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .weather-info {
+        flex-direction: column; /* Exibe previsões em coluna */
+        align-items: center; /* Alinha previsões no centro */
+    }
+    
+    .daily-forecast {
+        width: 100%; /* Faz cada previsão ocupar a largura total disponível */
+        margin: 5px 0; /* Ajusta o espaçamento vertical entre previsões */
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .weather-info {
+        flex-direction: row; /* Exibe previsões em linha */
+        justify-content: space-around; /* Espaça previsões uniformemente */
+    }
+    
+    .daily-forecast {
+        width: calc(50% - 20px); /* Faz cada previsão ocupar metade da largura disponível */
+    }
+}
